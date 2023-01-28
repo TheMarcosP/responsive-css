@@ -1,0 +1,315 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
+}
+
+header {
+    background: #2E323F;
+    padding: 0.8em 0;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+
+.logo {
+    height: 30px;
+}
+
+
+
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nav__link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    margin: 0.7em;
+    display: block;
+    color : #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5em 1.2em;
+    max-width: 400px;
+}
+
+
+.nav__link--button{
+    background-color: #A59678;
+    border-radius: 50px;
+}
+
+section{
+    padding: 5em 0;
+}
+
+.section--one{    
+    background-color: #3B4050;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    margin-top: 0;
+    color: white;
+}
+
+h1 span{
+    color: #A59678;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: white;
+    font-weight: bold;
+    background-color: #A59678;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+
+.section--two{
+    background-color: #f1f1f1;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: bold;
+    color: #A59678;
+}
+
+
+.section--three{
+    background-color: white;
+}
+
+.s3col {
+    font-size: 1rem;
+    margin: 1em;
+    padding: 1em;
+    color: white;
+    background-color: #3B4050;
+}
+
+
+.section--four{
+    background-color: #3B4050;
+    color: white;
+}
+
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.s4h5{
+    color: #A59678;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0.6em auto;
+}
+
+.s4col{
+    text-align: center;
+    color : #6F737F;
+
+}
+
+
+
+.s4link{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color : #6F737F;
+    margin: 0em auto;
+    display: block;
+    text-decoration: none;
+    padding: 0.8em 0em;
+    max-width: 400px;
+}
+
+@media (min-width: 700px){
+
+    .s3row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+
+
+    h1{
+        text-align: left;
+        width: 60%;
+    }
+
+    
+    
+    .nav__list{
+        display: block;
+    }
+
+    .nav__link {
+        margin: 0em;
+        display: inline-block;
+
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        
+    }
+
+    .s3con{
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+
+    .s3row{
+        display: block;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    
+    .s3col1{
+        width: 60%;
+    }
+
+    .s3col2{
+        width: 40%;
+    }
+
+    .s4rightcol{
+        width: 40%;
+    }
+
+    .s4con{
+        align-items: flex-start;
+    }
+}
